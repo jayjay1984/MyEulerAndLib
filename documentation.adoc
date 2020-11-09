@@ -3,7 +3,7 @@
 Notes on Problem 1
 ==================
 
-https://projekteuler.de/problems/1[Vielfache von 3 und 5]
+https://projecteuler.net/problem=1[Multiples of 3 and 5]
 
 .There are 2 approaches to solve this problem
 . "brute force" approach which simply loops through all numbers.
@@ -14,6 +14,16 @@ https://projekteuler.de/problems/1[Vielfache von 3 und 5]
 1+2+3+4+...+n = \frac{(n*(n+1))}{2} \\
 S = 3 * \sum_{i=1}^{333}i + 5*\sum_{k=1}^{200}k = 3 * \frac{333*(333+1)}{2} + 5 * \frac{200*(200+1)}{2} = 266333
 ++++
+
+Notes on Problem 2
+==================
+https://projecteuler.net/problem=2[Even Fibonacci numbers]
+
+nothing special.
+
+.Learnings
+. define DEBUG (True/False) at beginning
+. print(f0, end=' ') without new line. print("\n") later.
 
 
 
