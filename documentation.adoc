@@ -1,6 +1,20 @@
-Hallo
-=====
+:stem: latexmath
+
+Notes on Problem 1
+==================
+
+https://projekteuler.de/problems/1[Vielfache von 3 und 5]
+
+.There are 2 approaches to solve this problem
+. "brute force" approach which simply loops through all numbers.
+. use gaussian sum formula
+
+[stem]
+++++
+1+2+3+4+...+n = \frac{(n*(n+1))}{2} \\
+S = 3 * \sum_{i=1}^{333}i + 5*\sum_{k=1}^{200}k = 3 * \frac{333*(333+1)}{2} + 5 * \frac{200*(200+1)}{2} = 266333
+++++
 
 
-- this could be really cool
+
 
