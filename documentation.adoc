@@ -26,5 +26,15 @@ nothing special.
 . print(f0, end=' ') without new line. print("\n") later.
 
 
+Notes on Problem 3
+==================
+https://projecteuler.net/problem=3[Largest prime factor]
 
+basic of prime numbers. Could be helpful later on.
+
+Notes on Problem 4
+==================
+https://projecteuler.net/problem=4[Largest palindrome product]
+
+approach:
 

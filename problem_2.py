@@ -1,6 +1,6 @@
 # Gerade Fibonacci-Zahlen
 
-DEBUG = True
+DEBUG = False
 
 def fibonacci_even_sum(limit):
     """calculates and returns the sum of the even values in the Fibonacci sequence up to limit.
@@ -34,7 +34,7 @@ def fibonacci_even_sum(limit):
         
 
 if __name__ == "__main__":
-    L = 1000000000
+    L = 4000000
     sum_even_fibo = fibonacci_even_sum(L)
 
     print(f"the sum of even fibonacci numbers below {L} is {sum_even_fibo}")
