@@ -38,3 +38,11 @@ https://projecteuler.net/problem=4[Largest palindrome product]
 
 approach:
 
+Notes on Problem 7
+==================
+https://projecteuler.net/problem=7[10001st prime]
+
+https://de.wikipedia.org/wiki/Primzahlsatz
+prime density up to the first 10000 primes is around 10%.
+So we can check up to a limit of 150000.
+
