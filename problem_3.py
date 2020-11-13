@@ -18,7 +18,7 @@ def prime_grid(limit, grid = []):
         l = grid
         p = grid[-1]
 
-    while (p < limit):
+    while (p < limit-1):
         p += 2
         skip = False
         for d in l:
