@@ -1,4 +1,4 @@
-# Largest palindrome product
+# Smallest miltiple
 DEBUG = False
 
 import problem_3

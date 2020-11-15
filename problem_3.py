@@ -22,8 +22,10 @@ def prime_grid(limit, grid = []):
         p += 2
         skip = False
         for d in l:
+            if(d > math.ceil(math.sqrt(p))):
+                break
             # check if d divides p
-            if(p % d == 0):
+            if((p % d == 0)):
                 skip = True
                 break
         if(skip):

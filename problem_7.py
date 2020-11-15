@@ -1,4 +1,4 @@
-# Largest palindrome product
+# n-th prime
 DEBUG = False
 
 import problem_3

@@ -1,4 +1,4 @@
-# Largest palindrome product
+# square of sum and sum of square
 DEBUG = False
 
 def sum_of_squares(n):
