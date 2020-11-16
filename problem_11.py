@@ -1,26 +1,84 @@
 # largest product in a grid
 DEBUG = False
 
+def char_range(c1, c2):
+    """Generates the characters from `c1` to `c2`, inclusive."""
+    for c in range(ord(c1), ord(c2)+1):
+        yield chr(c)
+
 def string_to_2d_list(string_grid):
     i = 0
     list_result = []
+    line = []
     figure = ""
-    while (i < len(string_grid)-1):
+    while (i < len(string_grid)):
         if(string_grid[i] == ' '):
-            print(f"figure is {figure} and i is {i}")
-            list_result.append(int(figure))
+            #print(f"figure is {figure} and i is {i}")
+            line.append(int(figure))
             figure = ""
         elif(string_grid[i] == '\n'):
-            print(f"fugure is {figure} and i is {i}")
-            list_result.append(int(figure))
+            #print(f"fugure is {figure} and i is {i}")
+            line.append(int(figure))
+            list_result.append(line)
             figure = ""
-        elif(string_grid[i] in ['0'...'9']):
+            line = []
+        elif(string_grid[i] in char_range('0','9')):
             figure += string_grid[i]
-            print(figure)
         else:
             pass
         i += 1
+    return list_result
     
+
+def search_largest_product(grid, seq_length):
+    """searches and returns the largest product of 'seq_length' adjacent numbers in 'grid'.
+
+    Args:
+        grid (2 dimensional list of integers): the grid to search in
+        seq_length (integer): how many numbers shall be multiplied
+    """
+    largest_product = 0
+
+    for x in range(len(grid)):
+        for y in range(len(grid[0])):
+            #right
+            if( y < (len(grid[0])-seq_length)):
+                product = 1
+                for i in range(seq_length):
+                    product = product * grid[x][y+i]
+                
+                largest_product = max(largest_product, product)
+            
+            #down
+            if( x < (len(grid)-seq_length)):
+                product = 1
+                for i in range(seq_length):
+                    product = product * grid[x+i][y]
+                
+                largest_product = max(largest_product, product)
+
+            #diag right
+            if(( y < (len(grid[0])-seq_length)) and ( x < (len(grid)-seq_length))):
+                product = 1
+                for i in range(seq_length):
+                    product = product * grid[x+i][y+i]
+                
+                largest_product = max(largest_product, product)
+
+            #diag left
+            if(( y > seq_length-1) and ( x < (len(grid)-seq_length))):
+                product = 1
+                for i in range(seq_length):
+                    product = product * grid[x+i][y-i]
+                
+                largest_product = max(largest_product, product)
+
+    return largest_product
+
+
+
+
+
 
 
 
@@ -48,8 +106,13 @@ if __name__ == "__main__":
 01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48
 """
     
-string_to_2d_list(problem_string_grid)
+list_grid = string_to_2d_list(problem_string_grid)
 
+print(list_grid[4][7])
+print(len(list_grid))
+print(len(list_grid[0]))
+
+print(search_largest_product(list_grid,4))
 
 
 
